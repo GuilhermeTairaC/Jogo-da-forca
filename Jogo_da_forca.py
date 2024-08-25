@@ -21,27 +21,27 @@ while x < (len(Letras)) and Erros < 5: # Funcionamento do jogo
     
         
     print(Resposta[::])
-    S = (str(input('Digite a Letra que quiser:')))
+    S = (str(input('Digite a Letra que quiser:'))) # Guarda a letra(tentativa)
         
                 
-    if S in Letras:
+    if S in Letras: # Verifica se a letra corresponde a alguma letra da palavra-chave
         for i in range(len(Letras)):
 
         
-            if S == Letras[i]:
+            if S == Letras[i]: # Substitui a letra correspondente ao lugar certo na palavra
                 Resposta [i] = S
                 x += 1
    
    
-    else:
+    else: # Contabiliza +1 a variavel erro
         Erros += 1
         print('Incorreta!')
         print(f'Contagem de Erros: {Erros}/5') 
-if Resposta == Letras:
+if Resposta == Letras: # Verifica se a resposta é igual a todas as letras da palavra-chave
     for i in range(20):
         print("                             ")
     print(f'Você ganhou a palavra era: {Palavra}')
-else:
+else: # So ira acontecer se a variavel erro chegar ao seu limite, ou seja, o jogador perder
     for i in range(20):
         print("                             ")
    
